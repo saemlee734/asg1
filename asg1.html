@@ -1,0 +1,136 @@
+<!--
+Sabrina Lee
+ID: 1958512
+saemlee@ucsc.edu
+asg1.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sabrina Lee CSE160 Assignment 1</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f7fa;
+        color: #333;
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+        line-height: 1.6;
+      }
+
+      canvas, figure img {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      button, input[type="range"], input[type="checkbox"] {
+        margin: 5px;
+      }
+
+      button {
+        padding: 6px 12px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .mode-buttons {
+        background-color: #2196F3;
+      }
+
+      .mode-buttons:hover {
+        background-color: #1976D2;
+      }
+
+      ul {
+        background-color: #eef;
+        padding: 10px 20px;
+        border-radius: 8px;
+      }
+
+      figure {
+        text-align: center;
+      }
+
+      figcaption {
+        font-style: italic;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+
+  <body onload="main()">
+    <h1>Sabrina Lee - CSE160 Assignment 1</h1>
+
+    <p><strong>Email:</strong> saemlee@ucsc.edu</p>
+
+    <p><strong>Notes to Grader:</strong></p>
+    <ul>
+      <li>
+        There is a custom picture of a boat in the ocean, which can be viewed by clicking the "Generate Picture" button.
+      </li>
+      <li>
+        <strong>Growing Mode</strong> is a checkbox that makes each new shape larger than the previous one.
+        <br>
+        It’s slightly buggy, make sure the shape size slider is set to the smallest value, then check/uncheck the Growing Mode checkbox to reset it properly :,)
+      </li>
+    </ul>
+
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/point.js"></script>
+    <script src="../lib/triangle.js"></script>
+    <script src="../lib/circle.js"></script>
+    <script src="asg1.js"></script>
+
+    <div id="performance-display"></div>
+
+    <br>
+    <button id="clear-canvas">Clear Canvas</button>
+    <button id="generate-picture">Generate Picture</button>
+
+    <h3>Drawing Mode:</h3>
+    <button class="mode-buttons" id="squares">Squares</button>
+    <button class="mode-buttons" id="triangles">Triangles</button>
+    <button class="mode-buttons" id="circles">Circles</button>
+
+    <h3>Shape Color:</h3>
+    Red <input type="range" min="0" max="255" value="255" class="slider" id="red-slider">
+    Green <input type="range" min="0" max="255" value="255" class="slider" id="green-slider">
+    Blue <input type="range" min="0" max="255" value="255" class="slider" id="blue-slider">
+
+    <h3>Shape Size Options:</h3>
+    Growing Mode (each shape gets larger): <input type="checkbox" id="growing">
+    <br>
+    Shape Size: <input type="range" min="1" max="50" value="10" class="slider" id="shape-size-slider">
+    <br>
+    (Circles) Segment Count: <input type="range" min="3" max="50" value="10" class="slider" id="segment-count-slider">
+
+    <br><br>
+    <figure>
+      <img src="cse160_boat.jpg" alt="Boat sketch" width="400">
+      <figcaption>This is my sketch for the boat drawing</figcaption>
+    </figure>
+
+  </body>
+</html>
