@@ -1,7 +1,7 @@
 
 # Assignment 1: Interactive WebGL Paint App 🎨
 
-##Website
+## Website
 https://saemlee734.github.io/asg1/asg1.html
 
 ## Overview
