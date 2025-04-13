@@ -1,6 +1,9 @@
 
 # Assignment 1: Interactive WebGL Paint App 🎨
 
+##Website
+https://saemlee734.github.io/asg1/asg1.html
+
 ## Overview
 
 This project is part of **CSE-160: Introduction to Computer Graphics**, and implements a simple paint program using **WebGL**. Users can interact with a canvas to draw shapes like **points**, **triangles**, and **circles** by clicking or dragging the mouse. Sliders and buttons are provided for choosing colors, shape types, size, and more.
