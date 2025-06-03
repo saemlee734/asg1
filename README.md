@@ -89,6 +89,7 @@ No build tools or server required.
 
 Developed for **Assignment 1: Painting (Easy)**  
 **CSE-160: Intro to Computer Graphics – Spring 2025**
+- Used Chatgpt and Deepseek
 
 ---
 
